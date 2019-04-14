@@ -1,0 +1,48 @@
+body{
+    background: #444;
+}
+#yinyang{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#000000 50%,#000000 100%);
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    margin:50px auto;
+}
+#yinyang::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    border: 40px solid black;
+}
+#yinyang::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: black;
+    top: 50px;
+    right: 0;
+    border: 40px solid white;
+}
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+p{
+    color: white;
+    text-align: center;
+}
